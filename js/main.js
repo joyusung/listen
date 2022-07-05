@@ -11,6 +11,7 @@ $(function(){
         $('.full_page').hide();
         $('body').removeClass('active');
         $('.full_page .menu .sub').stop().slideUp();
+        $('.full_page .menu > ul > li').removeClass('active');
     });
 
     // 전체메뉴 nav 클릭 이벤트
@@ -19,5 +20,9 @@ $(function(){
         $('.full_page .menu > ul > li').removeClass('active');
         $(this).find('.sub').stop().slideDown();
         $(this).addClass('active');
+    });
+
+    $('.popup_close').click(function(){
+        $('.popup').fadeOut();
     });
 });
